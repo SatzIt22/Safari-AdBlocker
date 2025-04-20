@@ -1,0 +1,61 @@
+[
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*doubleclick\\.net.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*googlesyndication\\.com.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*adservice\\.google\\..*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*amazon-adsystem\\.com.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*ad\\..*",
+            "resource-type": ["script", "image"]
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*ads\\..*",
+            "resource-type": ["script", "image"]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "div[id*='google_ads'], div[id*='ad-'], div[class*='ad-'], div[class*='ads-'], div[class*='advert'], iframe[src*='ad'], iframe[id*='google_ads']"
+        },
+        "trigger": {
+            "url-filter": ".*"
+        }
+    }
+]
