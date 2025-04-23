@@ -36,8 +36,64 @@
             "type": "block"
         },
         "trigger": {
+            "url-filter": ".*://.*adnxs\\.com.*"
+        }
+    },
+     {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*ad\\.atdmt\\.com.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*ads\\.pubmatic\\.com.*"
+        }
+    },
+     {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*openx\\.net.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*zedo\\.com.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*facebook\\.com/plugins/like\\.php.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*twitter\\.com/intent/tweet.*"
+        }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
             "url-filter": ".*://.*ad\\..*",
-            "resource-type": ["script", "image"]
+            "resource-type": ["script", "image", "style", "document"]
         }
     },
     {
@@ -46,16 +102,34 @@
         },
         "trigger": {
             "url-filter": ".*://.*ads\\..*",
+            "resource-type": ["script", "image", "style", "document"]
+        }
+    },
+     {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": ".*://.*tracking\\..*",
             "resource-type": ["script", "image"]
         }
     },
     {
         "action": {
             "type": "css-display-none",
-            "selector": "div[id*='google_ads'], div[id*='ad-'], div[class*='ad-'], div[class*='ads-'], div[class*='advert'], iframe[src*='ad'], iframe[id*='google_ads']"
+            "selector": "div[id*='google_ads'], div[id*='ad-'], div[class*='ad-'], div[class*='ads-'], div[class*='advert'], iframe[src*='ad'], iframe[id*='google_ads'], [class*='ad_unit'], [id*='advertisement'], .banner-ad"
         },
         "trigger": {
             "url-filter": ".*"
         }
-    }
+    },
+     {
+        "action": {
+            "type": "css-display-none",
+             "selector": "body > iframe[src*='ad']"
+        },
+         "trigger": {
+             "url-filter": ".*"
+         }
+     }
 ]
